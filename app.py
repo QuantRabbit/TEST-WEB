@@ -5,6 +5,9 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import streamlit as st
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
+
+nltk.download('vader_lexicon')
 
 # Initialize SentimentIntensityAnalyzer
 vader = SentimentIntensityAnalyzer()
