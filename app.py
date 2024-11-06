@@ -111,3 +111,27 @@ if analyze_button:
 st.markdown("---")
 st.markdown("**Created by QantRabbit** | 📊 Powered by Finviz and VADER Sentiment Analysis | © 2024")
 
+st.markdown("### Visit My Portafolio")
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <a href="https://quantrabbit.xyz" target="_blank">
+            <button style="
+                background-color: #61dafb;
+                border: none;
+                color: #0a0a0a;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;">
+                Go to QuantRabbit
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
