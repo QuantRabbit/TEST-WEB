@@ -48,9 +48,12 @@ if analyze_button:
     for ticker, news_table in news_tables.items():
         if news_table:
             for row in news_table.findAll('tr'):
-                title = row.a.text
-                compound_score = vader.polarity_scores(title)['compound']
-                parsed_data.append([ticker, title, compound_score])
+                # Check if row.a exists
+                if row.a:
+                    title = row.a.text
+                    compound_score = vader.polarity_scores(title)['compound']
+                    parsed_data.append([ticker, title, compound_score])
+
 
     # Create DataFrame from parsed data
     df = pd.DataFrame(parsed_data, columns=['Ticker', 'Title', 'Compound Score'])
